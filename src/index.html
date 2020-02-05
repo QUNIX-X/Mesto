@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+  <div class="root">
+
+    <header class="header root__section">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+    </header>
+
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name">Jaques Causteau</h1>
+          <p class="user-info__job">Sailor, Researcher</p>
+          <button class="button user-info__edit-button">Edit</button>
+        </div>
+        <button class="button user-info__place-button">+</button>
+      </div>
+    </div>
+
+    <div class="places-list root__section">
+    </div>
+
+    <div class="spinner spinner_hidden"></div>
+
+    <div class="popup popup_type_avatar">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close close__avatar">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form form__avatar" name="avatar" id="new-avatar" novalidate>
+          <input type="url" name="avatar" class="popup__input popup__input_type_avatar" placeholder="Ссылка на картинку" required>
+          <p class="error" id="avatar"></p>
+          <button type="submit" class="button button_font-size_small popup__button button_disabled" disabled>Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_image">
+      <div class="popup__image-container">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close close__image">
+        <img src="" alt="#" class="image-popup">
+      </div>
+    </div>
+    
+    <div class="popup popup_type_place">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close close__place">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form form__place" name="place" id="new-place" novalidate>
+          <input type="text" name="place" class="popup__input popup__input_type_place" placeholder="Название" autocomplete="off" minlength="2" maxlength="30" required>
+          <p class="error" id="place"></p>
+          <input type="url" name="link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" autocomplete="off" required>
+          <p class="error" id="link"></p>
+          <button type="submit" class="button button_font-size_large popup__button button_disabled" disabled>+</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_edit">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close close__edit">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form form__edit" name="edit" id="edit" novalidate>
+          <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" autocomplete="off" minlength="2" maxlength="30" required>
+          <p class="error" id="name"></p>
+          <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе" autocomplete="off" minlength="2" maxlength="30" required>
+          <p class="error" id="job"></p>
+          <button type="submit" name="submit" class="button popup__button" disabled>Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <!--script src="server.js"></!--script>
+  <script src="scripts/owner.js"></script>
+  <script src="scripts/spinner.js"></script>
+  <script src="scripts/root.js"></script>
+  <script src="scripts/card.js"></script>
+  <script src="scripts/userInfo.js"></script>
+  <script src="scripts/cardList.js"></script>
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/popup.js"></script>
+  <script src="scripts/popupEdit.js"></script>
+  <script src="scripts/popupPlace.js"></script>
+  <script src="scripts/popupImage.js"></script>
+  <script src="scripts/popupAvatar.js"></script>
+  <script src="scripts/errors.js"></script>
+  <script src="index.js"></script-->
+</body>
+</html>
