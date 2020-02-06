@@ -6,7 +6,7 @@
 #### Проект был создан для практической работы с webpack'ом и api сервера praktikum'а
 #### Технологии которые использовались в этом проекте :JS, CSS, HTML, WebPack, GIT, Babel, Autoprefixer, CSS-Loader, CSSNano, File-Loader, GH-Pages, PostCSS-Loader...
 ---
-### [Запуск проекта](https://qunix-x.github.io/Mesto/)
+## [Запуск проекта](https://qunix-x.github.io/Mesto/)
 ---
 ## Установка проекта
 #### Копируем проект:
