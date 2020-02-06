@@ -1,17 +1,26 @@
 import './pages/index.css';
-import {Card} from './scripts/card.js';
-import {CardList} from './scripts/cardList.js';
-import {errors} from './scripts/errors.js';
-import {Owner} from './scripts/owner.js';
-import {PopupAvatar} from './scripts/popupAvatar.js';
-import {PopupEdit} from './scripts/popupEdit.js';
-import {PopupImage} from './scripts/popupImage.js';
-import {PopupPlace} from './scripts/popupPlace.js';
-import {Root} from './scripts/root.js';
-import {Spinner} from './scripts/spinner.js';
-import {UserInfo} from './scripts/userInfo.js';
-import {Validation} from './scripts/validation.js';
-import {Api, api} from './server.js';
+
+import Api from './modules/api';
+import Card from './modules/card';
+import CardList from './modules/cardList';
+import { errors } from './modules/errors';
+import Owner from './modules/owner';
+import PopupAvatar from './modules/popupAvatar';
+import PopupEdit from './modules/popupEdit';
+import PopupImage from './modules/popupImage';
+import PopupPlace from './modules/popupPlace';
+import Root from './modules/root';
+import Spinner from './modules/spinner';
+import UserInfo from './modules/userInfo';
+import Validation from './modules/validation';
+
+const api = new Api({
+  url: NODE_ENV === 'development'?'http://praktikum.tk/cohort6':'https://praktikum.tk/cohort6',
+  headers: {
+      authorization: 'eaddcdab-86db-46f3-88bc-3b9671c80f29',
+      'Content-Type': 'application/json'
+  }
+});
 
 const owner = new Owner();
 const card = new Card(api, owner);

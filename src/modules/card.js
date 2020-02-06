@@ -1,4 +1,4 @@
-export class Card {
+export default class Card {
   constructor(api, owner) {
     this.api = api;
     this.owner = owner;

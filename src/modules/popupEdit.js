@@ -1,6 +1,6 @@
-import {Popup} from './popup.js';
+import Popup from './popup';
 
-export class PopupEdit extends Popup {
+export default class PopupEdit extends Popup {
   constructor(container, validation, user, api) {
     super(container);
     this.validation = validation;
