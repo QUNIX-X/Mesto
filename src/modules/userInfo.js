@@ -1,4 +1,4 @@
-export class UserInfo {
+export default class UserInfo {
   constructor(DOM, api, owner) {
     this.name = DOM.querySelector('.user-info__name');
     this.about = DOM.querySelector('.user-info__job');

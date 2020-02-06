@@ -1,4 +1,4 @@
-export class Api {
+export default class Api {
   constructor(options) {
     this.url = options.url;
     this.headers = options.headers;
@@ -79,11 +79,3 @@ export class Api {
     return console.log(err);
   }
 }
-
-export const api = new Api({
-  url: NODE_ENV === "development"?'http://95.216.175.5/cohort6':'https://95.216.175.5/cohort6',
-  headers: {
-      authorization: 'eaddcdab-86db-46f3-88bc-3b9671c80f29',
-      'Content-Type': 'application/json'
-  }
-});
